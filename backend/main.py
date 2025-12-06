@@ -51,7 +51,7 @@ def compute_optimal(req: ComputeRequest):
         "stations": req.stations,
     }
 
-# NEW: WEATHER + ALERT ENDPOINTS
+# WEATHER + ALERT ENDPOINTS
 
 BASE_URL = "https://api.weather.gov/"
 latitude, longitude = 39.95233, -75.16379
