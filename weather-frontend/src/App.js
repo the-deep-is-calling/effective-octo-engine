@@ -109,7 +109,7 @@ export default function App() {
 
   return (
   <div className="App">
-      <header className="header">Weather Station Optimizer + Early Warning System</header>
+      <header className="header">Early Warning System + Weather Station Optimizer</header>
 
       <div className="main-container">
         
