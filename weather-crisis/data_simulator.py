@@ -1,6 +1,3 @@
-pip install requests
-pip install json
-
 import random
 import requests
 import json
