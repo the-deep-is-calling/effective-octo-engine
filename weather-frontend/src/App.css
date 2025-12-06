@@ -1,0 +1,209 @@
+.App {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #e9f0ff; /* Softer blue background */
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #4a73ff, #6a8cff);
+  color: white;
+  padding: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.15);
+}
+
+/* MAIN LAYOUT (SIDE BY SIDE) */
+.main-container {
+  display: flex;
+  gap: 25px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.left-panel, .right-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* centers ALL content horizontally */
+  padding: 20px;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
+
+/* WEATHER CARD */
+.weather-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  border-left: 6px solid #4a73ff; /* Accent stripe */
+}
+
+.weather-card h2 {
+  margin-top: 0;
+  color: #4a73ff;
+}
+
+.weather-card table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.weather-card td {
+  padding: 6px 4px;
+  font-size: 16px;
+}
+
+.refresh-btn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #4a73ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.refresh-btn:hover {
+  background: #3b5ce0;
+}
+
+/* ALERT BOX COLORS */
+.alert-box {
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.alert-green {
+  background: #4caf50;
+}
+
+.alert-orange {
+  background: #ff9800;
+}
+
+.alert-red {
+  background: #f44336;
+}
+
+/* RIGHT SIDE - OPTIMIZER */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 380px;
+  margin-bottom: 30px;
+}
+
+.card label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card input {
+  margin-top: 10px;
+  padding: 8px;
+  width: 120px;
+  font-size: 16px;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #4a73ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card button:hover {
+  background: #3b5ce0;
+}
+
+.station-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.station-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #4a73ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #3d5fff;
+}
+
+/* RESULTS + GRID */
+.results {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.results h2 {
+  margin-bottom: 5px;
+  color: #4a73ff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.covered {
+  background-color: #4caf50;
+  color: white;
+}
+
+.uncovered {
+  background-color: #bfc7d1;
+  color: #333;
+}
