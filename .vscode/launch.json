@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "request": "launch",
+            "name": "Run React App",
+            "command": "npm start",
+            "cwd": "${workspaceFolder}/weather-frontend"
+        },
+        {
+            "type": "python",
+            "request": "launch",
+            "name": "Run Backend (Uvicorn)",
+            "module": "uvicorn",
+            "args": ["main:app", "--reload"],
+            "cwd": "${workspaceFolder}/backend",
+            "console": "integratedTerminal"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run Frontend + Backend",
+            "configurations": ["Run React App", "Run Backend (Uvicorn)"]
+        }
+    ]
+}
